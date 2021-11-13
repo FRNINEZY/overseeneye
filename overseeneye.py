@@ -12,7 +12,7 @@ os.system("cls")
 #api 
 key = "7e5552da788f400db1f3f51cd584933f"
 #input phone number
-print(""""  
+print(""" 
 
   /$$$$$$                                                                                                     
  /$$__  $$                                                                                                    
