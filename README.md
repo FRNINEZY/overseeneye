@@ -1,2 +1,2 @@
 # overseeneye
-shows phone numbers info. Working with all country numbers 
+shows phone number info. Working with all country numbers 
