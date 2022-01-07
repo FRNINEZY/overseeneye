@@ -28,30 +28,25 @@ print("""
                                                                                                                """)
 print(Fore.GREEN)
 phone = input("enter the phone number(ex: +1687049586785): ")
-os.system("cls")
-try:
-  #about phone number
-  ch_number = phonenumbers.parse(phone, "CH")
-  print(Fore.GREEN+ "Info: " + Fore.WHITE + str(ch_number))
+os.system("clear")
+#about phone number
+ch_number = phonenumbers.parse(phone, "CH")
+print(Fore.GREEN+ "Info: " + Fore.WHITE + str(ch_number))
 #country
-  place = geocoder.description_for_number(ch_number, "en")
-  print(Fore.GREEN + "Country: " + Fore.WHITE + place)
+place = geocoder.description_for_number(ch_number, "en")
+print(Fore.GREEN + "Country: " + Fore.WHITE + place)
 #provider
-  service = phonenumbers.parse(phone, "RO")
-  print(Fore.GREEN + "provider: " + Fore.WHITE +carrier.name_for_number(service, "en"))
+service = phonenumbers.parse(phone, "RO")
+print(Fore.GREEN + "provider: " + Fore.WHITE +carrier.name_for_number(service, "en"))
 #timezone
-  time = phonenumbers.parse(phone, "en")
-  print(Fore.GREEN + "timezone: " + Fore.WHITE + str(timezone.time_zones_for_number(time)))
+time = phonenumbers.parse(phone, "en")
+print(Fore.GREEN + "timezone: " + Fore.WHITE + str(timezone.time_zones_for_number(time)))
 #cordinats
-  geocoder = OpenCageGeocode(key)
-  idk = str(place)
-  place_number = geocoder.geocode(idk)
-  p_1 = place_number[0]['geometry']['lat']
-  p_2 = place_number[0]['geometry']['lng']
-  print(Fore.RED)
-  print("cordinats are:")
-  print(p_1, p_2)
-except:
-  print(Fore.RED)
-  print("Invalid phone number try again!")
-  sys.exit()
+geocoder = OpenCageGeocode(key)
+idk = str(place)
+place_number = geocoder.geocode(idk)
+p_1 = place_number[0]['geometry']['lat']
+p_2 = place_number[0]['geometry']['lng']
+print(Fore.RED)
+print("cordinats are:")
+print(p_1, p_2)
