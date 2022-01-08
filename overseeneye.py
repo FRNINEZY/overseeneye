@@ -51,6 +51,7 @@ p_2 = place_number[0]['geometry']['lng']
 print(Fore.RED)
 print("cordinats are:")
 print(p_1, p_2)
-print(Fore.RED)
-print("Invalid phone number try again!")
-sys.exit()
+
+
+
+
